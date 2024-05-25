@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/signIn.css">
+<div class="container-box sign-up">
+  <div>
+    <h6 class="sign-in-head">Sign Up</h6>
+  </div>
+  <div class="sign-in-box">
+    <form class="new-contact-form" action="/users/create" method="POST">
+      <div class="p-14">
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="p-14">
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="p-14">
+        <input type="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="p-14">
+        <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+      </div>
+      <div class="p-14">
+        <input type="hidden" name="permission" value="employee">
+        <p class="msg">By Clicking Join Now, You Agree to the Terms and Conditions,UserPolicy and User Agreements</p>
+      </div>
+      <div class="p-14">
+        <button class="submit-btn" type="submit">Join Now</button>
+      </div>
+      <% if(!locals.user){%>
+        <p class="btm-msg">Already have an Account <a href="/users/signin"> Sign In</a></p>
+      <%}%>
+    </form>
+  </div>
+</div>

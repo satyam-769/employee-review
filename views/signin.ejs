@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/signIn.css">
+<div class="box-top">
+  <div class="container-box">
+    <div class="hgfhf">
+      <div>
+        <h6 class="sign-in-head">Sign in</h6>
+      </div>
+      <div class="sign-in-box">
+        <form class="new-contact-form" action="/users/create-session" method="POST">
+          <div class="p-14">
+            <input type="text" name="email" placeholder="Enter your username" required>
+          </div>
+          <!-- <div class="p-14">
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div> -->
+          <div class="p-14">
+            <input type="password" name="password" placeholder="Enter your password" required>
+          </div>
+          <div class="p-14">
+            <button class="submit-btn" type="submit">Sign In</button>
+          </div>
+          <p>Don't have an Account <a href="/users/signup"> Sign Up</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

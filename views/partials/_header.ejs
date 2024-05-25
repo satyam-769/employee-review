@@ -1,0 +1,26 @@
+<nav class="navbar nav-header navbar-expand-sm w-100">
+  <div class="container-fluid">
+    <h3>
+      <% if(locals.user){%><a class="nav navbar-brand ms-5" href="/">Employee Review System</a>
+      <% }else{%>
+        <a class="nav navbar-brand ms-5" href="#">Employee Review System</a>
+      <%}%>
+    </h3>
+    <h4 class="nav-item">
+      <ul class="item">
+        <% if(locals.user){%> <%if(locals.user.permission=='admin'){%>
+        <li><a href="/">Home</a></li>
+        <li><a href="/review/assign-work">Assign Review</a></li>
+        <li><a href="/employee/home">Employee Section</a></li>
+        <li><a href="/users/signup">Register</a></li>
+        <%}%>
+        <li>Hello <%=user.name%></li>
+        <li><a href="/users/signout">Sign Out</a></li>
+        <% }else{%>
+        <li><a href="/users/signin">Sign In</a></li>
+        <li><a href="/users/signup">Sign Up</a></li>
+        <%}%>
+      </ul>
+    </h4>
+  </div>
+</nav>
