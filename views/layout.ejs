@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> </title>
+    <title>Employee review</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
@@ -27,23 +27,23 @@
     <main>
       <div class="layout-main"><%- body %></div>
     </main>
-    <%- include('./partials/_footer'); %> <%- script%>
-
+    <%- include('./partials/_footer'); %>
     <%- script %>
+
     <!-- <script>
-      <% if (flash.success) { %>
+      <% if (flash && flash.success) { %>
         new Noty({
             theme: 'bootstrap-v4',
-            text: '<%- JSON.stringify(flash.success) %>',
+            text: '<%= flash.success %>',
             type: 'success',
             layout: 'topRight',
             timeout: 1500
         }).show();
       <% } %>
-      <% if (flash.error) { %>
+      <% if (flash && flash.error) { %>
         new Noty({
             theme: 'bootstrap-v4',
-            text: '<%- JSON.stringify(flash.error) %>',
+            text: '<%= flash.error %>',
             type: 'error',
             layout: 'topRight',
             timeout: 1500
