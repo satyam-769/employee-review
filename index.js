@@ -62,14 +62,14 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser)
 
 app.use(flash());
-app.use((req, res, next) => {
-  res.locals.flash = req.flash();
-  next();
-});
-app.get('/', (req, res) => {
-  // Assuming you render the EJS template here
-  res.render('index', { flash: req.flash() });
-});
+// app.use((req, res, next) => {
+//   res.locals.flash = req.flash();
+//   next();
+// });
+// app.get('/', (req, res) => {
+//   // Assuming you render the EJS template here
+//   res.render('index', { flash: req.flash() });
+// });
 
 app.use(customMiddleware);
 
