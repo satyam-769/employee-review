@@ -47,7 +47,7 @@ const destroySession = function (req, res) {
       return res.redirect('back');
     }
 
-    return res.redirect('/users/signin');
+    return res.redirect('/signin');
   });
 }
 

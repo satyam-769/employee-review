@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/', passport.checkAuthentication, homeController);
 router.post('/completeReview', passport.checkAuthentication, completeReview);
 
-router.use('/users', users)
+router.use('/', users)
 router.use('/review', review)
 router.use('/employee', employee)
 
